@@ -11,7 +11,8 @@ import { GreenComponent } from './green.component';
 export const ROUTES: Routes = [
     { path: 'color', component: ColorComponent,
         children: [
-            { path: 'green', component: GreenComponent, outlet: 'main'}
+            { path: 'green', component: GreenComponent, outlet: 'main'},
+            { path: 'green/:id', component: GreenComponent, outlet: 'main'}
         ]
     }
   ];
