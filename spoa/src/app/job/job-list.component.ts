@@ -30,8 +30,13 @@ export class JobListComponent implements OnInit {
         this.jobService.delete('http://shouji.com/api/delete/id/' + e).then(
             res => {
                 if (res.success === true) {
+
+                    for (let i = 0; i < this.jobLists.length; i++) {
+                        if (this.jobLists[i].id === e) {
+                            this.jobLists.splice(i, 1);
+                        }
+                    }
                     alert('删除成功');
-                    location.reload();
                 } else {
                     alert('删除失败');
                 }
