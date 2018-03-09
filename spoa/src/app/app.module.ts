@@ -15,6 +15,8 @@ import { JobService } from './job/job.service';
 import { PersonComponent } from './employee/person.component';
 import { EmployeeService } from './employee/employee.sevice';
 import { EmptyModule } from './empty/empty.module';
+import { BananaModule } from './fruit/banana.module';
+import { ColorModule } from './color/color.module';
 
 
 
@@ -48,6 +50,8 @@ export const ROUTES: Routes = [
     FormsModule,
     HttpModule,
     EmptyModule,
+    ColorModule,
+    BananaModule,
     RouterModule.forRoot(ROUTES),
   ],
   providers: [MenuService, JobService, EmployeeService],

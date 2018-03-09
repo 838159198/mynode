@@ -17,7 +17,14 @@ export class AppComponent implements OnInit {
     this.menus = this.menuService.getMenuList();
   }
   gotoPage(value: any) {
-    this.router.navigate([value]);
+    if (value === 'bananaChild') {
+      this.router.navigate(['banana', { outlets: {main: value}}], {skipLocationChange: false});
+    } else if ( value === 'green') {
+      this.router.navigate(['color', {outlets: {main: value}}], {skipLocationChange: false});
+    } else {
+      this.router.navigate([value]);
+    }
+
   }
 
 }
