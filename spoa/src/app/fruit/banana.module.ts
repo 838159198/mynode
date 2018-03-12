@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BananaComponent } from './banana.component';
 import { BananaChildComponent } from './banana-child.component';
+import { AlertWidgetComponent } from './widget/alert.widget';
 
 // 路由
 export const ROUTES: Routes = [
@@ -19,6 +20,10 @@ export const ROUTES: Routes = [
     declarations: [
         BananaComponent,
         BananaChildComponent,
+        AlertWidgetComponent,
+    ],
+    exports: [
+       AlertWidgetComponent,
     ],
     imports: [
       BrowserModule,

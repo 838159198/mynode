@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ColorComponent } from './color.component';
 import { GreenComponent } from './green.component';
+import { BananaModule } from '../fruit/banana.module';
 
 
 // 路由
@@ -26,6 +27,7 @@ export const ROUTES: Routes = [
       BrowserModule,
       FormsModule,
       HttpModule,
+      BananaModule,
       RouterModule.forChild(ROUTES),
     ],
     providers: [ ],
